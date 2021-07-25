@@ -1,20 +1,81 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header class="ion-no-border" mode='ios'>
+  <ion-toolbar class="ion-padding-start ion-padding-end ion-padding-top">
+    <ion-icon slot="start" name="menu"></ion-icon>
+    <ion-title class="ion-padding-top">
+      Quick Weather
     </ion-title>
+    <span slot="end">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-badge>&nbsp;</ion-badge>
+    </span>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <h4 class="location">Orlando, FL</h4>
+  <div class="main-info">
+    <img src="/assets/clouds-37009.svg" alt="">
+    <h5>Partly Cloudy</h5>
+    <h1>44.6 °F</h1>
+  </div>
+  <div class="other-info ion-padding">
+    <ion-card class="ion-padding">
+      <div class="info">
+        <h5>Wind</h5>
+        <h3>N 7 mph</h3>
+      </div>
+    </ion-card>
+    <ion-card class="ion-padding">
+      <div class="info">
+        <h5>Humidity</h5>
+        <h3>58%</h3>
+      </div>
+    </ion-card>
+    <ion-card class="ion-padding">
+      <div class="info">
+        <h5>Rain</h5>
+        <h3>10%</h3>
+      </div>
+    </ion-card>
+    <ion-card class="ion-padding">
+      <div class="info">
+        <h5>Feels like</h5>
+        <h3>43 °F</h3>
+      </div>
+    </ion-card>
+  </div>
+  <div class="hourly">
+    <h3 class="ion-padding-start">Sunday, Today</h3>
+    <div class="hourly-info ion-padding">
+      <div class="info">
+        <p>Now</p>
+        <img src="/assets/clouds-37009.svg" alt="">
+        <p>44.6 °F</p>
+      </div>
+      <div class="info">
+        <p>10 AM</p>
+        <img src="/assets/clouds-37009.svg" alt="">
+        <p>45 °F</p>
+      </div>
+      <div class="info">
+        <p>11 AM</p>
+        <img src="/assets/clouds-37009.svg" alt="">
+        <p>46 °F</p>
+      </div>
+      <div class="info">
+        <p>12 AM</p>
+        <img src="/assets/rain-98538.svg" alt="">
+        <p>47 °F</p>
+      </div>
+      <div class="info">
+        <p>1 PM</p>
+        <img src="/assets/rain-98538.svg" alt="">
+        <p>48 °F</p>
+      </div>
+      <div class="info">
+        <p>2 PM</p>
+        <img src="/assets/rain-98538.svg" alt="">
+        <p>48 °F</p>
+      </div>
+    </div>
   </div>
 </ion-content>
