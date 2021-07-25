@@ -1,0 +1,7 @@
+{
+  "name": "quickWeatherView",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
