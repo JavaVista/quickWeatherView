@@ -13,6 +13,9 @@
 <ion-content>
   <h4 class="location">Orlando, FL</h4>
   <div class="main-info">
+    <ion-title>{{ today | date: 'longDate'}}</ion-title>
+    <app-digital-clock></app-digital-clock>
+    <app-analog-clock></app-analog-clock>
     <img src="/assets/clouds-37009.svg" alt="">
     <h5>Partly Cloudy</h5>
     <h1>44.6 °F</h1>
@@ -78,4 +81,20 @@
       </div>
     </div>
   </div>
+  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button>
+  <ion-list>
+    <div *ngIf="!isLoading">Loading...</div>
+    <ion-card *ngFor="let person of persons">
+      <ion-card-header>
+        <ion-card-subtitle>{{person.first_name}} </ion-card-subtitle>
+        <ion-card-title>{{ person.email }} </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       <p>{{ person.gender }}</p>
+        <p>{{ person.ip_address }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

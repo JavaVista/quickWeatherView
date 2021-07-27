@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { DigitalClockComponent } from '../digital-clock/digital-clock.component';
+import { AnalogClockComponent } from '../analog-clock/analog-clock.component';
 
 
 @NgModule({
@@ -14,6 +16,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, DigitalClockComponent, AnalogClockComponent]
 })
 export class HomePageModule {}

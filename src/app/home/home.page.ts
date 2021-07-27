@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person, WeatherApiService } from '../service/weather-api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  persons: Person[] = [];
+  today = new Date();
+  isLoading: boolean;
 
-  constructor() {}
+  constructor(private weather: WeatherApiService) {}
 
+  ngOnInit(): void {
+    this.currentDateTime();
+  }
+
+  currentDateTime() {
+    setInterval(() => {
+      this.today;
+    }, 1000);
+  }
+
+  onClick() {
+    this.isLoading = true;
+    this.weather.getPersons().subscribe((data) => (this.persons = data));
+  }
 }
