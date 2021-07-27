@@ -14,8 +14,11 @@
   <h4 class="location">Orlando, FL</h4>
   <div class="main-info">
     <ion-title>{{ today | date: 'longDate'}}</ion-title>
-    <app-digital-clock></app-digital-clock>
-    <app-analog-clock></app-analog-clock>
+    <app-digital-clock *ngIf="!toggleClock"></app-digital-clock>
+    <app-analog-clock *ngIf="toggleClock" ></app-analog-clock>
+    <ion-button (click)="onToggleClock()" expand="block" fill="clear" shape="round">
+     Show Analog
+    </ion-button>
     <img src="/assets/clouds-37009.svg" alt="">
     <h5>Partly Cloudy</h5>
     <h1>44.6 °F</h1>

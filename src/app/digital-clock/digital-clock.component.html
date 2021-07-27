@@ -1,9 +1,29 @@
 <div class="digital-clock">
-  <div class="day-title">{{ day }}</div>
-  <div class="digital-time">
-    <div>{{hour}} :&nbsp;</div>
-    <div>{{minute}} :&nbsp;</div>
-    <div>{{second}}&nbsp;</div>
-    <div class="am-pm">{{am_pm}}</div>
-  </div>
+    <div class="day-title">{{ day }}</div>
+    <div class="digital-time">
+        <ion-skeleton-text
+            animated
+            style="width: 100%"
+            *ngIf="!hour"
+        ></ion-skeleton-text>
+        <div>{{hour}} :&nbsp;</div>
+        <ion-skeleton-text
+            animated
+            style="width: 100%"
+            *ngIf="!minute"
+        ></ion-skeleton-text>
+        <div>{{minute}} :&nbsp;</div>
+        <ion-skeleton-text
+            animated
+            style="width: 100%"
+            *ngIf="!second"
+        ></ion-skeleton-text>
+        <div>{{second}}&nbsp;</div>
+        <ion-skeleton-text
+            animated
+            class="am-pm-skeleton"
+            *ngIf="!am_pm"
+        ></ion-skeleton-text>
+        <div class="am-pm">{{am_pm}}</div>
+    </div>
 </div>

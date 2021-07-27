@@ -10,16 +10,16 @@ export class DigitalClockComponent implements OnInit {
   day: string;
   hour: any;
   minute: string;
-  private date = new Date();
+  date = new Date();
   private days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   second: string;
-
+  
   constructor() {}
 
   ngOnInit() {
     setInterval(() => {
-      const date = new Date();
-      this.updateDate(date);
+      this.date = new Date();
+      this.updateDate(this.date);
     }, 1000);
     // getDay() returns integer that correspond to the date array.
     this.day = this.days[this.date.getDay()];

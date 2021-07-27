@@ -11,7 +11,8 @@ export class HomePage {
   today = new Date();
   isLoading: boolean;
 
-  constructor(private weather: WeatherApiService) {}
+  constructor(private weather: WeatherApiService) { }
+  toggleClock: boolean
 
   ngOnInit(): void {
     this.currentDateTime();
@@ -26,5 +27,9 @@ export class HomePage {
   onClick() {
     this.isLoading = true;
     this.weather.getPersons().subscribe((data) => (this.persons = data));
+  }
+
+  onToggleClock() {
+    this.toggleClock = !this.toggleClock
   }
 }
